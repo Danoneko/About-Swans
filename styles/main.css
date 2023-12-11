@@ -1,0 +1,92 @@
+@import url(./global.css);
+
+/*=========================================================
+    Шапка сайта
+=========================================================*/
+/* Обратится к элементу с тегом header */
+header {
+    position: absolute;             /* Абсолютное позиционирование */
+    width: 100%;                    /* Ширина 100% ширины родителя */
+    height: 150px;                  /* Высота 150px */
+
+    display: flex;                  /* Разбить содержимое вертикально */
+    justify-content: center;        /* Центрировать содержимое по центру по горизонтали */
+    align-items: center;            /* Центрировать содержимое по центру по вертикали */
+    background: linear-gradient(180deg, 
+    rgba(0, 0, 0, 0.80) 0%, 
+    rgba(0, 0, 0, 0.00) 100%);    /* Задний фон сделать градиентом */
+}
+
+/* Обратится к элементу с классом header_a */
+.header_a {
+    color: var(--g-cr-white-20);    /* Цвет текста сделать белым */
+    margin: 10px 50px;              /* Установить внешние поля 10px-по вертикали 50px-по горизонтали */
+    font-weight: 500;               /* Установить толщину текста на 500 */
+    transition: all 0.3s linear;
+}
+
+/* При наведении на ссылку */
+.header_a:hover {
+    color: var(--g-cr-green-20);
+    transition: all 0.3s linear;
+}
+
+/* Обратиться первым по уровне влюженности заголовкам h1, тега header */
+header > h1 {
+    text-transform: uppercase;      /* Сделать заголовок заглавными буквами */
+    font-size: var(--g-ft-40);      /* Установить размер шрифта в 40px */
+}
+
+/*=========================================================
+    Слайдер
+=========================================================*/
+/* Обратится к элементу с классом slider */
+.slider {
+    width: 100%;                    /* Ширина 100% */
+    height: 100vh;                  /* Высота 100% экрана */
+    background-size: 100%;          /* Размер фона 100% */
+    background-position: center;    /* Позиция фона по центру */
+    /* Анимировать бесконечно по 50 секунд */
+    animation: slider 50s infinite ease-out;
+}
+
+@keyframes slider {
+    0% {
+        background: url(../images/img_3.jpg) 0 0 no-repeat;
+    }
+
+    20% {
+        background: url(../images/img_2.jpg) 0 0 no-repeat;
+    }
+
+    40% {
+        background: url(../images/img_1.jpg) 0 0 no-repeat;
+    }
+
+    60% {
+        background: url(../images/img_4.jpg) 0 0 no-repeat;
+    }
+
+    80% {
+        background: url(../images/img_5.jpg) 0 0 no-repeat;
+    }
+
+    100% {
+        background: url(../images/img_6.jpg) 0 0 no-repeat;
+    }
+}
+
+/*=========================================================
+    Описание
+=========================================================*/
+.heading {
+    color: var(--g-cr-green-20);
+    font-family: 600px;
+}
+
+.main_img {
+    width: 800px;
+    height: 590px;
+    border-radius: 50px;
+    box-shadow: 10px 12px 14.6px 0px rgba(0, 0, 0, 0.27);
+}
