@@ -1,92 +1,266 @@
 @import url(./global.css);
 
 /*=========================================================
-    Шапка сайта
+  Шапка сайта
 =========================================================*/
 /* Обратится к элементу с тегом header */
 header {
-    position: absolute;             /* Абсолютное позиционирование */
-    width: 100%;                    /* Ширина 100% ширины родителя */
-    height: 150px;                  /* Высота 150px */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 100%; /* Ширина 100% ширины родителя */
+  height: 100px; /* Высота 150px */
 
-    display: flex;                  /* Разбить содержимое вертикально */
-    justify-content: center;        /* Центрировать содержимое по центру по горизонтали */
-    align-items: center;            /* Центрировать содержимое по центру по вертикали */
-    background: linear-gradient(180deg, 
-    rgba(0, 0, 0, 0.80) 0%, 
-    rgba(0, 0, 0, 0.00) 100%);    /* Задний фон сделать градиентом */
+  display: flex; /* Разбить содержимое вертикально */
+  justify-content: center; /* Центрировать содержимое по центру по горизонтали */
+  align-items: center; /* Центрировать содержимое по центру по вертикали */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Задний фон сделать градиентом */
 }
 
 /* Обратится к элементу с классом header_a */
 .header_a {
-    color: var(--g-cr-white-20);    /* Цвет текста сделать белым */
-    margin: 10px 50px;              /* Установить внешние поля 10px-по вертикали 50px-по горизонтали */
-    font-weight: 500;               /* Установить толщину текста на 500 */
-    transition: all 0.3s linear;
+  margin: 10px 50px; /* Установить внешние поля 10px-по вертикали 50px-по горизонтали */
+  font-weight: 500; /* Установить толщину текста на 500 */
+  font-size: 20px;
+}
+
+.header_a a {
+  color: var(--g-cr-white-20); /* Цвет текста сделать белым */
 }
 
 /* При наведении на ссылку */
-.header_a:hover {
-    color: var(--g-cr-green-20);
-    transition: all 0.3s linear;
+.header_a:hover a {
+  text-decoration: underline;
 }
 
 /* Обратиться первым по уровне влюженности заголовкам h1, тега header */
-header > h1 {
-    text-transform: uppercase;      /* Сделать заголовок заглавными буквами */
-    font-size: var(--g-ft-40);      /* Установить размер шрифта в 40px */
+header > .h1 {
+  text-transform: uppercase; /* Сделать заголовок заглавными буквами */
+  font-size: var(--g-ft-32); /* Установить размер шрифта в 32px */
 }
 
 /*=========================================================
-    Слайдер
+	Подвал
+=========================================================*/
+footer {
+  background: var(--g-cr-blue-20);
+  color: var(--g-cr-white-20);
+}
+
+.footer_right {
+  text-align: right;
+}
+
+.footer_bottom {
+  text-align: center;
+  padding-top: 40px;
+}
+
+/*=========================================================
+  Слайдер
 =========================================================*/
 /* Обратится к элементу с классом slider */
 .slider {
-    width: 100%;                    /* Ширина 100% */
-    height: 100vh;                  /* Высота 100% экрана */
-    background-size: 100%;          /* Размер фона 100% */
-    background-position: center;    /* Позиция фона по центру */
-    /* Анимировать бесконечно по 50 секунд */
-    animation: slider 50s infinite ease-out;
+  width: 100%; /* Ширина 100% */
+  height: 100vh; /* Высота 100% экрана */
+  background-position: center; /* Позиция фона по центру */
+  /* Анимировать бесконечно по 50 секунд */
+  animation: slider 50s infinite ease-out;
 }
 
 @keyframes slider {
-    0% {
-        background: url(../images/img_3.jpg) 0 0 no-repeat;
-    }
+  0% {
+    background: url(../images/img_3.jpg) 0 0 no-repeat;
+    background-size: 100%; /* Размер фона 100% */
+  }
 
-    20% {
-        background: url(../images/img_2.jpg) 0 0 no-repeat;
-    }
+  20% {
+    background: url(../images/img_2.jpg) 0 0 no-repeat;
+    background-size: 100%; /* Размер фона 100% */
+  }
 
-    40% {
-        background: url(../images/img_1.jpg) 0 0 no-repeat;
-    }
+  40% {
+    background: url(../images/img_1.jpg) 0 0 no-repeat;
+    background-size: 100%; /* Размер фона 100% */
+  }
 
-    60% {
-        background: url(../images/img_4.jpg) 0 0 no-repeat;
-    }
+  60% {
+    background: url(../images/img_4.jpg) 0 0 no-repeat;
+    background-size: 100%; /* Размер фона 100% */
+  }
 
-    80% {
-        background: url(../images/img_5.jpg) 0 0 no-repeat;
-    }
+  80% {
+    background: url(../images/img_5.jpg) 0 0 no-repeat;
+    background-size: 100%; /* Размер фона 100% */
+  }
 
-    100% {
-        background: url(../images/img_6.jpg) 0 0 no-repeat;
-    }
+  100% {
+    background: url(../images/img_6.jpg) 0 0 no-repeat;
+    background-size: 100%; /* Размер фона 100% */
+  }
+}
+
+.about {
+  font-size: 18px;
+  color: var(--g-cr-black-10);
+  text-align: justify;
+}
+
+.about_heading {
+  color: var(--g-cr-green-20);
+}
+
+.about_img {
+  width: 100%;
+  height: 300px;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 10px 12px 14.6px 0px rgba(0, 0, 0, 0.27);
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.about_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.about_bg {
+  background-color: var(--g-cr-green-10);
+}
+
+.about_fact {
+  display: flex;
+  align-items: center;
+  color: var(--g-cr-green-20);
+}
+
+.about_fact.__blue {
+  color: var(--g-cr-blue-20);
+}
+
+.about_fact > img {
+  margin-right: 40px;
 }
 
 /*=========================================================
-    Описание
+	Виды
 =========================================================*/
-.heading {
-    color: var(--g-cr-green-20);
-    font-family: 600px;
+
+.type {
+  text-align: justify;
 }
 
-.main_img {
-    width: 800px;
-    height: 590px;
-    border-radius: 50px;
-    box-shadow: 10px 12px 14.6px 0px rgba(0, 0, 0, 0.27);
+.type_img,
+.facts_img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.type_img > img,
+.facts_img > img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.type_heading-img {
+  position: relative;
+  z-index: 10;
+  color: var(--g-cr-white-20);
+  margin: 20px;
+  font-size: var(--g-ft-60);
+}
+.type_heading {
+  color: var(--g-cr-blue-20);
+}
+
+.type_klikun,
+.type_trubach {
+  margin-top: 15%;
+  text-align: right;
+}
+
+.type_shipun,
+.type_malyi,
+.type_american,
+.type_chernii,
+.type_chernochey {
+  margin-top: 7%;
+}
+
+.type_shipun-bg {
+  background: var(--g-cr-blue-10);
+  font-size: 1.17em;
+}
+
+/*=========================================================
+	Факты
+=========================================================*/
+
+.facts {
+  color: var(--g-cr-blue-30);
+}
+
+.facts_bg {
+  background-color: var(--g-cr-blue-10);
+}
+
+.facts li {
+  padding: 10px 0;
+  text-align: justify;
+}
+
+/*=========================================================
+	Скролл наверх 
+=========================================================*/
+.scroll-up {
+  display: inline-block;
+  background: var(--g-cr-blue-30);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+}
+.scroll-up::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  border-radius: 1px;
+  background: var(--g-cr-white-20);
+  top: 50%;
+  left: 24px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.scroll-up::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  border-radius: 1px;
+  background: var(--g-cr-white-20);
+  top: 50%;
+  left: 37px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.scroll-up:hover {
+  cursor: pointer;
+  background: #4A7AA0;
+}
+.scroll-up.show {
+  opacity: 1;
+  visibility: visible;
 }

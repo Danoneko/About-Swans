@@ -1,10 +1,21 @@
 @import url(../fonts/fonts.css);
 
 /* Установим глобальные правила ко всему документу */
-html, body {
-  margin: 0;  /* уберем края у документа */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; /* уберем края у документа */
+}
+
+html,
+body {
   /* Подключим свои шрифты и замену им в случае неполадок */
-  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 /* Уберем цвет и подчеркивание у всех ссылок имеющихся на странице */
@@ -13,9 +24,12 @@ a {
   text-decoration: none;
 }
 
-/* Установим переменные со значениями, который используются чаще всего */
-:root{
+section {
+  margin-top: 20px;
+}
 
+/* Установим переменные со значениями, который используются чаще всего */
+:root {
   /* Шрифты */
   --g-ft-80: 80px;
   --g-ft-70: 70px;
@@ -25,22 +39,61 @@ a {
 
   /* Цвета */
   --g-cr-black-0: #000;
-  --g-cr-black-10: #1E1E1E;
-  --g-cr-black-20: #221B1B;
+  --g-cr-black-10: #1e1e1e;
+  --g-cr-black-20: #221b1b;
 
-  --g-cr-green-10: #EDF9F6;
-  --g-cr-green-20: #7A908A;
-  
-  --g-cr-blue-10: #C7E0F4;
-  --g-cr-blue-20: #7095B2;
+  --g-cr-green-10: #edf9f6;
+  --g-cr-green-20: #7a908a;
+
+  --g-cr-blue-10: #c7e0f4;
+  --g-cr-blue-20: #7095b2;
   --g-cr-blue-30: #285272;
-  
-  --g-cr-white-10: rgba(255, 255, 255, 0.60);
+
+  --g-cr-white-10: rgba(255, 255, 255, 0.6);
   --g-cr-white-20: #fff;
 }
 
 /* Создадим собственный контейнер с полями ограничивающий содержимое документа */
 .wrapper {
-  min-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex > div {
+  flex: 40%;
+}
+
+.flex > div:first-child {
+  margin-right: 40px;
+}
+
+.flex > div:last-child {
+  margin-left: 40px;
+}
+
+.container {
+  padding: 40px 0;
+}
+
+.heading {
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.__justify {
+  text-align: justify;
+}
+
+.__left {
+  text-align: left;
+}
+
+.__right {
+  text-align: right;
 }
